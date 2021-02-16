@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+/*Opciones Generales*/
+.moneda::before {
+  content: "$";
+}
+
+.icon-lg {
+  width: 48px;
+  height: 48px;
+}
+
+header {
+  background-color: #f8f9fa !important;
+}
+
+header #logo-menu {
+  width: 50px;
+}
+/*# sourceMappingURL=styles.css.map */
