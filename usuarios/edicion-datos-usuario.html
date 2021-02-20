@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Links Estilos CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Sistema de Administración Villa Quietud</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/logo vq.svg" alt="" class="img-fluid" id="logo-menu">
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                                <div class="me-auto mb-2 mb-lg-0 lh-1">
+                                    <div class="fs-6">Germa sanchez</div>
+                                    <div class="fs-6 fw-bold">Hda Santa Ursula 81</div>
+                                    <div class="fs-6">#0010525</div>
+                                </div>
+
+
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link"><i data-feather="home"></i> Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link"><i data-feather="user"></i> Mis Datos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link"><i data-feather="x-square"></i> Salir</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12 my-3">
+                <h1>Edite sus datos</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 m-auto">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Nombre</label>
+                                <input type="text" name="name" id="" placeholder="Germán Sanchez" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Correo</label>
+                                <input type="email" name="Correo" id="" placeholder="nombre@correo.com" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Celular</label>
+                                <input type="text" name="celular" id="" placeholder="55 7824 6588" class="form-control">
+                            </div>
+                            <div class="d-grid ">
+                                <a type="submit" class="btn btn-primary mb-3">Guardar</a>
+                                <a href="user-data.html" class="btn btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Contraseña nueva</label>
+                                <input type="password" name="npass" id="" placeholder="" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Repita su nueva contraseña</label>
+                                <input type="password" name="npass" id="" placeholder="" class="form-control">
+                            </div>
+                            <div class="d-grid ">
+                                <a type="submit" class="btn btn-primary mb-3">Guardar</a>
+                                <a href="user-data.html" class="btn btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!--Feather Icon Replace-->
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>

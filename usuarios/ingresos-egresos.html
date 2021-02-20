@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Links Estilos CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Sistema de Administración Villa Quietud</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/logo vq.svg" alt="" class="img-fluid" id="logo-menu">
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                                <div class="me-auto mb-2 mb-lg-0 lh-1">
+                                    <div class="fs-6">Germa sanchez</div>
+                                    <div class="fs-6 fw-bold">Hda Santa Ursula 81</div>
+                                    <div class="fs-6">#0010525</div>
+                                </div>
+
+
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link"><i data-feather="home"></i> Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="user-data.html" class="nav-link"><i data-feather="user"></i> Mis Datos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link"><i data-feather="x-square"></i> Salir</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12 my-3">
+                <h1>Historial de Ingresos/Egresos</h1>
+                <p>Se mostraran los registros de cada año.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option selected>Seleccione un año</option>
+                      <option value="1">2021</option>
+                      <option value="2">2020</option>
+                      <option value="3">2019</option>
+                      <option value="4">2018</option>
+                      <option value="5">2017</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-grid">
+                    <a type="submit" class="btn btn-primary">Buscar</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>Mes</th>
+                            <th>Aportaciones</th>
+                            <th>Ingresos</th>
+                            <th>Egresos</th>
+                            <th>Desglose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019</td>
+                            <td>Diciembre</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Noviembre</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Octubre</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Septiembre</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Agosto</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Julio</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Junio</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Mayo</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Abril</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Marzo</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Febrero</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>Enero</td>
+                            <td>265</td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><span class="moneda">187,268.00</span></td>
+                            <td><a href="desglose-egresos.html">Ver más</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+
+        
+    </main>
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!--Feather Icon Replace-->
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>
