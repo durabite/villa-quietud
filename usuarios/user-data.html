@@ -108,7 +108,7 @@
                             <p><b>#0010525</b></p>
                             <p>Utiliza este codigo para pagar en caja</p>
                             <div class="mt-3 d-flex justify-content-end">
-                                <a href=""><i data-feather="eye"></i> Scan</a>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#myModalQr"><i data-feather="eye"></i> Scan</a>
                             </div>
                             
                         </div>
@@ -283,7 +283,7 @@
                             </tbody>
                           </table>
                           <div class="d-grid mt-5">
-                            <a type="submit" class="btn btn-info">Ver más</a>
+                            <a href="autos-registro-edicion.html" type="submit" class="btn btn-info">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -293,6 +293,26 @@
             
         </div>
     </main>
+
+    <!-- Modal QR-->
+    <div class="modal fade" id="myModalQr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pagar con QR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="assets/qr.svg" style="width: 75%;" alt="">
+                <div style="font-size: 2rem; font-weight: bold;">#0010525</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"><i data-feather="printer"></i> Imprimir</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
 
