@@ -1,0 +1,31 @@
+/*Opciones Generales*/
+.moneda::before {
+  content: "$";
+}
+
+.estatus-pagado {
+  color: green;
+  font-weight: bold;
+}
+
+.estatus-adeudo {
+  color: red;
+  font-weight: bold;
+}
+
+.icon-lg {
+  width: 48px;
+  height: 48px;
+  margin-top: 20px;
+}
+
+header {
+  background-color: #f8f9fa !important;
+}
+
+header #logo-menu {
+  width: 50px;
+}
+
+/*Media Queries*/
+/*# sourceMappingURL=styles.css.map */
