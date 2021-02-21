@@ -66,59 +66,7 @@
     <main class="container">
         <div class="row">
             <div class="col-12 my-3">
-                <h1>Edición de automoviles</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Automoviles Registrados</h4>
-                        <p>Recuerde que solo los automoviles registrados tendran acceso por ambas entradas y se les dara el servicio de apertura de pluma.</p>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Marca</th>
-                                    <th>Modelo</th>
-                                    <th>Año</th>
-                                    <th>Color</th>
-                                    <th>Placas</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Nissan</td>
-                                    <td>Trusu</td>
-                                    <td>2004</td>
-                                    <td>Plata</td>
-                                    <td>NEJ-38-21</td>
-                                    <td><a href="auto-edicion.html"><i data-feather="edit"></i> Editar</a></td>
-                                    <td><a href="#"><i data-feather="trash-2"></i> Borrar</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Chevrolet</td>
-                                    <td>Chevy</td>
-                                    <td>2012</td>
-                                    <td>Rojo</td>
-                                    <td>TSE-189</td>
-                                    <td><a href="auto-edicion.html"><i data-feather="edit"></i> Editar</a></td>
-                                    <td><a href="#"><i data-feather="trash-2"></i> Borrar</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Yamaha</td>
-                                    <td>R6</td>
-                                    <td>2018</td>
-                                    <td>Azul/Rojo</td>
-                                    <td>5F7LS</td>
-                                    <td><a href="auto-edicion.html"><i data-feather="edit"></i> Editar</a></td>
-                                    <td><a href="#"><i data-feather="trash-2"></i> Borrar</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <h1>Editando Registro</h1>
             </div>
         </div>
 
@@ -127,20 +75,20 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4>Registro automovil</h4>
+                        <h4>Automovil</h4>
                         <form class="row">
                             <div class="col-6">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Marca</label>
-                                    <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: Nissan, Ford, Chevrolet, etc..">
+                                    <input type="text" name="marca" id="" class="form-control" placeholder="Nissan">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Modelo</label>
-                                    <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: Tsuru, March, Altima, etc...">
+                                    <input type="text" name="marca" id="" class="form-control" placeholder="Tsuru">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Año</label>
-                                    <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: 2001, 2002, 2003, etc...">
+                                    <input type="text" name="marca" id="" class="form-control" placeholder="2004">
                                 </div>
                                 
                             </div>
@@ -148,11 +96,11 @@
                                 
                                 <div class="mb-3">
                                     <label for="" class="form-label">Color</label>
-                                    <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: Azul, Blanco/Rojo, etc...">
+                                    <input type="text" name="marca" id="" class="form-control" placeholder="Plata">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Placas</label>
-                                    <input type="text" name="marca" id="" class="form-control" placeholder="Placas de su vehiculo">
+                                    <input type="text" name="marca" id="" class="form-control" placeholder="NEJ-38-21">
                                 </div>
                                 <div class="mb-3">
                                     <div class="d-grid col">
@@ -170,16 +118,16 @@
         </div>
     </main>
 
-    <!-- Modal Automoviles-->
+    <!-- Modal Edicion Automoviles-->
     <div class="modal fade" id="myModalAuto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nuevo registro automovil</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Automovil Editado</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                Ha guardado correctamente los datos de su automovil
+                Ha editado correctamente los datos de su automovil
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
