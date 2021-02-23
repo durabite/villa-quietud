@@ -44,5 +44,9 @@ header {
   border-left: 5px solid #198754;
 }
 
+.bordes-azules {
+  border-left: 5px solid #0DCAF0;
+}
+
 /*Media Queries*/
 /*# sourceMappingURL=styles.css.map */

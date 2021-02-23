@@ -96,91 +96,97 @@
               
               <div class="row">
                 <div class="col-12">
-                  <h1>Dashboard</h1>
+                  <h1>Edita tu usuario</h1>
                 </div>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-12 mb-3">
-                  <h3>Ingresos</h3>
-                </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-verdes">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 m-auto">
+                <div class="card mb-3">
                     <div class="card-body">
-                      <p>Ingresos del dia</p>
-                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Nombre</label>
+                                <input type="text" name="name" id="" placeholder="Luis Muñoz" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Correo</label>
+                                <input type="email" name="Correo" id="" placeholder="luis@correo.com" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Celular</label>
+                                <input type="text" name="celular" id="" placeholder="55 7824 6588" class="form-control">
+                            </div>
+                            <div class="d-grid ">
+                                <a type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#myModalData">Guardar</a>
+                                <a href="user-data.html" class="btn btn-danger">Cancelar</a>
+                            </div>
+                        </form>
                     </div>
-                  </div>
                 </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos ultimos 15 dias del mes</p>
-                      <span class="fs-3"><b class="moneda">15,000.00</b></span>
-                    </div>
-                  </div>
-                </div><div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos del dia</p>
-                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-12 mb-3">
-                  <h3>Estadisticas</h3>
-                </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-azules">
+                <div class="card">
                     <div class="card-body">
-                      <p>Vecinos que aportarón hoy</p>
-                      <span class="fs-3"><b>25</b></span>
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Contraseña nueva</label>
+                                <input type="password" name="npass" id="" placeholder="" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Repita su nueva contraseña</label>
+                                <input type="password" name="npass" id="" placeholder="" class="form-control">
+                            </div>
+                            <div class="d-grid ">
+                                <a type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#myModalPass">Guardar</a>
+                                <a href="user-data.html" class="btn btn-danger">Cancelar</a>
+                            </div>
+                            <div class="alert alert-danger text-center mt-3">
+                                Su contraseña no coincide
+                            </div>
+                        </form>
                     </div>
-                  </div>
                 </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-azules">
-                    <div class="card-body">
-                      <p>Vecinos que aportarón en los ultimos 15 dias del mes</p>
-                      <span class="fs-3"><b>105</b></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-azules">
-                    <div class="card-body">
-                      <p>Total de vecinos que aportaron en el mes</p>
-                      <span class="fs-3"><b>236</b></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4 text-center mt-3">
-                  <div class="card bordes-azules">
-                    <div class="card-body">
-                      <p>Viviendas registradas/de</p>
-                      <span class="fs-3"><b>856/1400</b></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4 text-center mt-3">
-                  <div class="card bordes-azules">
-                    <div class="card-body">
-                      <p>Cantidad de vehiculos registrados</p>
-                      <span class="fs-3"><b>2250</b></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-
             </div>
+
+             </div>
+
         </div>
     </main>
-   
 
+     <!-- Modal Usuarios-->
+     <div class="modal fade" id="myModalData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Datos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+            Sus datos se han actualizado correctamente
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+   
+     <!-- Modal Contraseña-->
+     <div class="modal fade" id="myModalPass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Contraseña</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+            Su contraseña se ha actualizado correctamente
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <!-- Bootstrap Bundle with Popper -->
