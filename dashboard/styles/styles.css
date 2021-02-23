@@ -1,4 +1,4 @@
-/*Opciones Generales*/
+/*Opciones Generales User*/
 .moneda::before {
   content: "$";
 }
@@ -23,8 +23,25 @@ header {
   background-color: #f8f9fa !important;
 }
 
-header #logo-menu {
+#logo-menu {
   width: 50px;
+}
+
+/*Admin Dashboard*/
+#sidebarMenu a {
+  color: white;
+}
+
+#sidebarMenu a svg {
+  width: 20px;
+}
+
+#sidebarMenu hr {
+  background-color: white;
+}
+
+.bordes-verdes {
+  border-left: 5px solid #198754;
 }
 
 /*Media Queries*/

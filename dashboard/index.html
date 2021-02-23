@@ -20,8 +20,18 @@
 <body>
     <main class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh;">
                 <div class="position-sticky pt-3">
+
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <a href="index.html"><img src="assets/logo vq.svg" alt="" id="logo-menu"></a>
+                    <a href="#">
+                      <p class="m-0">Luis Muñoz</p>
+                      <span><b>Admin</b></span>
+                    </a>
+                  </div>
+
+                  <hr>
                   <ul class="nav flex-column">
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#">
@@ -31,70 +41,96 @@
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">
-                        <span data-feather="file"></span>
-                        Orders
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <span data-feather="shopping-cart"></span>
-                        Products
+                        <span data-feather="dollar-sign"></span>
+                        Aportaciones
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">
                         <span data-feather="users"></span>
-                        Customers
+                        Viviendas
+                      </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <span data-feather="arrow-right"></span>
+                        Ingresos
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">
-                        <span data-feather="bar-chart-2"></span>
-                        Reports
+                        <span data-feather="arrow-left"></span>
+                        Egresos
                       </a>
                     </li>
+                    <hr>
                     <li class="nav-item">
                       <a class="nav-link" href="#">
-                        <span data-feather="layers"></span>
-                        Integrations
+                        <span data-feather="user-check"></span>
+                        Alta Usuarios
                       </a>
                     </li>
-                  </ul>
-          
-                  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span>Saved reports</span>
-                    <a class="link-secondary" href="#" aria-label="Add a new report">
-                      <span data-feather="plus-circle"></span>
-                    </a>
-                  </h6>
-                  <ul class="nav flex-column mb-2">
+                    <hr>
                     <li class="nav-item">
                       <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Current month
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Last quarter
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Social engagement
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Year-end sale
+                        <span data-feather="log-out"></span>
+                        Salir
                       </a>
                     </li>
                   </ul>
                 </div>
-              </nav>
+            </nav>
+
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+              
+              <!-- Buscador General -->
+              <div class="container-fluid">
+                <div class="input-group my-3">
+                  <input type="text" name="" id="" class="form-control" placeholder="Buscar">
+                  <span class="input-group-text">
+                    <i data-feather="search"></i>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-12">
+                  <h1>Dashboard</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <h3>Ingresos</h3>
+                </div>
+                <div class="col-4 text-center">
+                  <div class="card bordes-verdes">
+                    <div class="card-body">
+                      <p>Ingresos del dia</p>
+                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 text-center">
+                  <div class="card bordes-verdes">
+                    <div class="card-body">
+                      <p>Ingresos ultimos 15 dias del mes</p>
+                      <span class="fs-3"><b class="moneda">15,000.00</b></span>
+                    </div>
+                  </div>
+                </div><div class="col-4 text-center">
+                  <div class="card bordes-verdes">
+                    <div class="card-body">
+                      <p>Ingresos del dia</p>
+                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
         </div>
     </main>
    
