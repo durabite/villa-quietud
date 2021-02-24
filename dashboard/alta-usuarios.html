@@ -94,7 +94,7 @@
                 </div>
               </div>
               
-              <div class="row">
+              <div class="row mb-3">
                 <div class="col-12">
                   <h1>Alta de Usuarios</h1>
                   <p>Tienes el rol de <b>Administrador</b> por lo que podras dar de alta a otros Administradores o Gestores de Cobranza.</p>
@@ -128,8 +128,10 @@
                                   </select>
                                   <div class="form-text">Un Administrador tendra los mismo privilegios que su cuenta, un Gestor de cobranza solo podra acceder a los cobros y edición de viviendas.</div>
                             </div>
-                            
-
+                            <div class="d-grid">
+                                <a type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#myModalData">Guardar</a>
+                                <a href="user.html" class="btn btn-danger">Cancelar</a>
+                            </div>
                        </form>
                     </div>
                   </div>
@@ -141,7 +143,23 @@
         </div>
     </main>
    
-
+    <!-- Modal Usuarios-->
+    <div class="modal fade" id="myModalData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nuevo Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+            Registro creado correctamente, enviaremos un correo electronico con una contraseña autogenerada para acceder al sistema
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <!-- Bootstrap Bundle with Popper -->
