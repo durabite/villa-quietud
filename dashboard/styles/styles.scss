@@ -2,6 +2,9 @@
 .moneda::before {
     content: "$";
 }
+.numeral::before {
+    content: "#";
+}
 .estatus-pagado {
     color: green;
     font-weight: bold;
