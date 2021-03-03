@@ -19,7 +19,7 @@
 
 <body>
     <main class="container-fluid">
-        <div class="row">
+        <div class="row h-auto">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh;">
                 <div class="position-sticky pt-3">
 
@@ -96,45 +96,79 @@
               
               <div class="row">
                 <div class="col-12">
-                  <h1>Dashboard</h1>
+                  <h1>Editando Auromovil</h1>
                 </div>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-12 mb-3">
-                  <h3>Ingresos</h3>
-                </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos del dia</p>
-                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
+              <div class="row mt-3">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Automovil</h4>
+                            <form class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Marca</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Nissan">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Modelo</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Tsuru">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Año</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="2004">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6">
+                                    
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Color</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Plata">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Placas</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="NEJ-38-21">
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-grid col">
+                                            <!--Este punto solo es para acomodar el boton-->
+                                            <label for="" class="form-label" style="color: white;">.</label>
+                                            <!--/Este punto solo es para acomodar el boton-->
+                                            <a type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalAuto">Guardar</a>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </form>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos ultimos 15 dias del mes</p>
-                      <span class="fs-3"><b class="moneda">15,000.00</b></span>
-                    </div>
-                  </div>
-                </div><div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos del dia</p>
-                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
+             
 
-            
-
+              
             </div>
         </div>
     </main>
    
+    <!-- Modal Edicion Automoviles-->
+    <div class="modal fade" id="myModalAuto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Automovil Editado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                Ha editado correctamente los datos del automovil
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

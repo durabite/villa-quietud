@@ -19,7 +19,7 @@
 
 <body>
     <main class="container-fluid">
-        <div class="row">
+        <div class="row h-auto">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh;">
                 <div class="position-sticky pt-3">
 
@@ -96,45 +96,78 @@
               
               <div class="row">
                 <div class="col-12">
-                  <h1>Dashboard</h1>
+                  <h1>Registro Nuevo</h1>
                 </div>
               </div>
 
-              <div class="row mb-3">
-                <div class="col-12 mb-3">
-                  <h3>Ingresos</h3>
-                </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos del dia</p>
-                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
-                    </div>
+              <div class="row">
+                  <div class="col-12">
+                      <form action="" class="my-3">
+                          <div class="d-flex">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona Calle</option>
+                                <option value="1">Hda Sta Cecilia</option>
+                                <option value="2">Hda Sta Ursula</option>
+                                <option value="3">Hda Hormiguero</option>
+                                <!-- Y asi nos seguimos con todas las calles en el sistema -->
+                                <option value="4">Todas las calles</option>
+                              </select>
+                              <select class="form-select mx-3" aria-label="Default select example">
+                                <option selected>Selecciona Numero Exterior</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <!-- Y asi nos seguimos con todas las calles en el sistema -->
+                                <option value="4">Todos los numeros</option>
+                              </select>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona Numero Interior</option>
+                                <option value="1">A1</option>
+                                <option value="2">C</option>
+                                <option value="3">Edif A Int 2</option>
+                                <!-- Y asi nos seguimos con todas las calles en el sistema -->
+                                <option value="4">Todos los interiores</option>
+                              </select>
+                          </div>
+                          <div class="col-4 my-3">
+                            <h2>Nombre</h2>
+                            <input type="text" class="form-control" placeholder="Nombre y Apellido">
+                          </div>
+                          <div class="col-8 my-3">
+                            <h2>Correo Electronico</h2>
+                            <div class="d-flex">
+                              <input type="email" class="form-control" placeholder="Correo Vecino">
+                              <input type="email" class="form-control ms-3" placeholder="Repetir Correo">
+                            </div>
+                          </div>
+                          <div class="text-center">
+                            <p>Al terminar el registro se enviara un correo electronico con las instrucciones de acceso,
+                              sin embargo ya puede realizar el cobro de la cuota de aportación</p>
+                              <a href="" class="btn btn-primary col-2" data-bs-toggle="modal" data-bs-target="#myModalVivienda">Registrar</a>
+                          </div>
+                      </form>
                   </div>
-                </div>
-                <div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos ultimos 15 dias del mes</p>
-                      <span class="fs-3"><b class="moneda">15,000.00</b></span>
-                    </div>
-                  </div>
-                </div><div class="col-4 text-center">
-                  <div class="card bordes-verdes">
-                    <div class="card-body">
-                      <p>Ingresos del dia</p>
-                      <span class="fs-3"><b class="moneda">5,000.00</b></span>
-                    </div>
-                  </div>
-                </div>
               </div>
-
-            
-
             </div>
         </div>
     </main>
-   
+   <!-- Modal Registro Vivienda-->
+   <div class="modal fade" id="myModalVivienda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vivienda Registrada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+            Ha registrado correctamente la vivienda, desde este momento puedes hacer cobros de aportaciones.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

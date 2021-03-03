@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Links Estilos CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Sistema de Administración Villa Quietud</title>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="row h-auto">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh;">
+                <div class="position-sticky pt-3">
+
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <a href="index.html"><img src="assets/logo vq.svg" alt="" id="logo-menu"></a>
+                    <a href="user.html">
+                      <p class="m-0">Luis Muñoz</p>
+                      <span><b>Admin</b></span>
+                    </a>
+                  </div>
+
+                  <hr>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">
+                        <span data-feather="home"></span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="aportaciones.html">
+                        <span data-feather="dollar-sign"></span>
+                        Aportaciones
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="viviendas.html">
+                        <span data-feather="users"></span>
+                        Viviendas
+                      </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                      <a class="nav-link" href="ingresos.html">
+                        <span data-feather="arrow-right"></span>
+                        Ingresos
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="egresos.html">
+                        <span data-feather="arrow-left"></span>
+                        Egresos
+                      </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                      <a class="nav-link" href="alta-usuarios.html">
+                        <span data-feather="user-check"></span>
+                        Alta Usuarios
+                      </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.html">
+                        <span data-feather="log-out"></span>
+                        Salir
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+              
+              <!-- Buscador General -->
+              <div class="container-fluid">
+                <div class="input-group my-3">
+                  <input type="text" name="" id="" class="form-control" placeholder="Buscar">
+                  <span class="input-group-text">
+                    <i data-feather="search"></i>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-12">
+                  <h1>Edición de Automoviles</h1>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                  <div class="col-12">
+                      <div class="card text-center">
+                          <div class="card-body">
+                            <h3>Automoviles Registrados</h3>
+                            <p>Aqui puede editar la informacion de los automoviles registrados de la vivienda</p>
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Marca</th>
+                                  <th>Modelo</hd>
+                                  <th>Año</th>
+                                  <th>Color</th>
+                                  <th>Placas</th>
+                                  <th></th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Nissan</td>
+                                  <td>Tsuru</td>
+                                  <td>2004</td>
+                                  <td>Plata</td>
+                                  <td>NEJ-38-21</td>
+                                  <td><a href=""><i data-feather="edit"></i> Editar</a></td>
+                                  <td><a href=""><i data-feather="trash"></i> Borrar</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Chevrolet</td>
+                                  <td>Chevy</td>
+                                  <td>2012</td>
+                                  <td>Rojo</td>
+                                  <td>TSE-189</td>
+                                  <td><a href=""><i data-feather="edit"></i> Editar</a></td>
+                                  <td><a href=""><i data-feather="trash"></i> Borrar</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Yamaha</td>
+                                  <td>R6</td>
+                                  <td>2018</td>
+                                  <td>Azul/Rojo</td>
+                                  <td>5F7LS</td>
+                                  <td><a href=""><i data-feather="edit"></i> Editar</a></td>
+                                  <td><a href=""><i data-feather="trash"></i> Borrar</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                      </div>
+                     
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Registro automovil</h4>
+                            <form class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Marca</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: Nissan, Ford, Chevrolet, etc..">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Modelo</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: Tsuru, March, Altima, etc...">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Año</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: 2001, 2002, 2003, etc...">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6">
+                                    
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Color</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Ejemplo: Azul, Blanco/Rojo, etc...">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Placas</label>
+                                        <input type="text" name="marca" id="" class="form-control" placeholder="Placas de su vehiculo">
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-grid col">
+                                            <!--Este punto solo es para acomodar el boton-->
+                                            <label for="" class="form-label" style="color: white;">.</label>
+                                            <!--/Este punto solo es para acomodar el boton-->
+                                            <a type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalAuto">Guardar</a>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </main>
+   
+    <!-- Modal Automoviles-->
+    <div class="modal fade" id="myModalAuto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo registro automovil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                Ha guardado correctamente los datos de su automovil
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!--Feather Icon Replace-->
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>
