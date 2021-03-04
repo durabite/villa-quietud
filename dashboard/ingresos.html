@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <!--Feather Icons-->
     <script src="https://unpkg.com/feather-icons"></script>
+    <!--Charts JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
     <title>Sistema de Administración Villa Quietud</title>
 </head>
@@ -20,67 +22,73 @@
 <body>
     <main class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh;">
-                <div class="position-sticky pt-3">
+          <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh; position: fixed;">
+            <div class="position-sticky pt-3">
 
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <a href="index.html"><img src="assets/logo vq.svg" alt="" id="logo-menu"></a>
-                    <a href="user.html">
-                      <p class="m-0">Luis Muñoz</p>
-                      <span><b>Admin</b></span>
+              <div class="d-flex flex-column align-items-center text-center">
+                <a href="index.html"><img src="assets/logo vq.svg" alt="" id="logo-menu"></a>
+                <a href="user.html">
+                  <p class="m-0">Luis Muñoz</p>
+                  <span><b>Admin</b></span>
+                </a>
+              </div>
+
+              <hr>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">
+                    <span data-feather="home"></span>
+                    Dashboard
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aportaciones.html">
+                    <span data-feather="dollar-sign"></span>
+                    Aportaciones
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="viviendas.html">
+                    <span data-feather="users"></span>
+                    Viviendas
+                  </a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link" href="ingresos.html">
+                    <span data-feather="arrow-right"></span>
+                    Ingresos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="egresos.html">
+                    <span data-feather="arrow-left"></span>
+                    Egresos
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="balance.html">
+                        <span data-feather="bar-chart-2"></span>
+                        Balance
                     </a>
-                  </div>
-
-                  <hr>
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">
-                        <span data-feather="home"></span>
-                        Dashboard
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="aportaciones.html">
-                        <span data-feather="dollar-sign"></span>
-                        Aportaciones
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="viviendas.html">
-                        <span data-feather="users"></span>
-                        Viviendas
-                      </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                      <a class="nav-link" href="ingresos.html">
-                        <span data-feather="arrow-right"></span>
-                        Ingresos
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="egresos.html">
-                        <span data-feather="arrow-left"></span>
-                        Egresos
-                      </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                      <a class="nav-link" href="alta-usuarios.html">
-                        <span data-feather="user-check"></span>
-                        Alta Usuarios
-                      </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                      <a class="nav-link" href="login.html">
-                        <span data-feather="log-out"></span>
-                        Salir
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link" href="alta-usuarios.html">
+                    <span data-feather="user-check"></span>
+                    Alta Usuarios
+                  </a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">
+                    <span data-feather="log-out"></span>
+                    Salir
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </nav>
 
             <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
               
@@ -94,15 +102,11 @@
                 </div>
               </div>
               
-              <div class="row">
-                <div class="col-12">
-                  <h1>Dashboard</h1>
-                </div>
-              </div>
+              
 
               <div class="row mb-3">
                 <div class="col-12 mb-3">
-                  <h3>Ingresos</h3>
+                 <h1>Ingresos</h1>
                 </div>
                 <div class="col-4 text-center">
                   <div class="card bordes-verdes">
@@ -122,21 +126,210 @@
                 </div><div class="col-4 text-center">
                   <div class="card bordes-verdes">
                     <div class="card-body">
-                      <p>Ingresos del dia</p>
+                      <p>Ingresos del mes</p>
                       <span class="fs-3"><b class="moneda">5,000.00</b></span>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <div class="row my-4">
+                <div class="col-12">
+                  <h4>Ingreso Mensual</h4>
+                  <div class="d-flex">
+                    <select class="form-select me-3" aria-label="Default select example">
+                      <option selected>Seleccione Año</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                    </select>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione Mes</option>
+                      <option value="Enero">Enero</option>
+                      <option value="Febrero">Febrero</option>
+                      <option value="Marzo">Marzo</option>
+                      <option value="Abril">Abril</option>
+                      <option value="Mayo">Mayo</option>
+                      <option value="Junio">Junio</option>
+                      <option value="Julio">Julio</option>
+                      <option value="Agosto">Agosto</option>
+                      <option value="Septiembre">Septiembre</option>
+                      <option value="Octubre">Octubre</option>
+                      <option value="Noviembre">Noviembre</option>
+                      <option value="Diciembre">Diciembre</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!--Canvas Charts JS (Estadisticas)-->
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="chLine"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                 </div>     
             
+                 <div class="row my-5">
+                   <div class="col-12">
+                     <h3>Registro de Ingresos</h3>
+                     <div class="card mt-4">
+                       <div class="card-body">
+                         <table class="table text-center">
+                           <thead>
+                             <tr>
+                               <th>Ticket #</th>
+                               <th>Vivienda</th>
+                               <th>Año</th>
+                               <th>Mes</th>
+                               <th>Cuota</th>
+                               <th>Fecha</th>
+                               <th>Pagó</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td class="numeral">532</td>
+                               <td>Hda Santa Ursula 81</td>
+                               <td>2019</td>
+                               <td>Septiembre</td>
+                               <td class="moneda">220.00</td>
+                               <td>15/09/2019</td>
+                               <td>Germán Sanchez</td>
+                             </tr>
+                             <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                            <tr>
+                              <td class="numeral">532</td>
+                              <td>Hda Santa Ursula 81</td>
+                              <td>2019</td>
+                              <td>Septiembre</td>
+                              <td class="moneda">220.00</td>
+                              <td>15/09/2019</td>
+                              <td>Germán Sanchez</td>
+                            </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+
+                 <!--Pagination-->
+                 <div class="row mb-5">
+                   <div class="col-12 d-flex justify-content-center align-items-center">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                      </ul>
+                    </nav>
+                   </div>
+                 </div>
 
             </div>
         </div>
     </main>
    
 
-
+    <!--Charts Ingresos-->
+    <script src="charts-ingresos.js"></script>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

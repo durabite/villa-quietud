@@ -100,73 +100,65 @@
                 </div>
               </div>
               
+             
+
               <div class="row mb-3">
-                <div class="col-12">
-                  <h1>Alta de Usuarios</h1>
-                  <p>Tienes el rol de <b>Administrador</b> por lo que podras dar de alta a otros Administradores o Gestores de Cobranza.</p>
-                </div>
-              </div>
+                <div class="col-12 mb-3">
+                  <h1>Editar Egreso</h1>
+                </div>              
+            </div>
 
-              <div class="row mb-3 d-flex justify-content-center">
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-body">
-                       <h4>Registro de nuevo usuario</h4>
-                       <form action="">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Nombre y Apellido</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Juan Perez">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Numero Celular</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="10 digitos">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@correo.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Selecciona un Rol</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Selecciona una opción</option>
-                                    <option value="Admin">Administrador</option>
-                                    <option value="Cash">Cobranza</option>
-                                  </select>
-                                  <div class="form-text">Un Administrador tendra los mismo privilegios que su cuenta, un Gestor de cobranza solo podra acceder a los cobros y edición de viviendas.</div>
-                            </div>
-                            <div class="d-grid">
-                                <a type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#myModalData">Guardar</a>
-                                <a href="user.html" class="btn btn-danger">Cancelar</a>
-                            </div>
-                       </form>
+            <form action="">
+                <div class="row mb-5">
+                    <div class="col-6">
+                        <h3>Fecha de registro</h3>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" placeholder="15">
+                            <input type="text" class="form-control mx-3" placeholder="Septiembre">
+                            <input type="text" class="form-control" placeholder="2019">
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-
-             </div>
-
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Concepto</h3>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" placeholder="Pago Seguridad">
+                            <input type="text" class="form-control mx-3" placeholder="$40,000.00">
+                            <input type="text" class="form-control" placeholder="5487778">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalEgreso">Editar</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
         </div>
     </main>
    
-    <!-- Modal Usuarios-->
-    <div class="modal fade" id="myModalData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nuevo Registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-            Registro creado correctamente, enviaremos un correo electronico con una contraseña autogenerada para acceder al sistema
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
-            </div>
+<!-- Modal Registro de Egreso-->
+<div class="modal fade" id="myModalEgreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edición de Egreso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body text-center">
+          Egreso editado correctamente
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
         </div>
     </div>
-
+    </div>
+</div>
+   
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

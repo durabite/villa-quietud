@@ -20,79 +20,85 @@
 <body>
     <main class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh;">
-                <div class="position-sticky pt-3">
+          <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse" style="height: 100vh; position: fixed;">
+            <div class="position-sticky pt-3">
 
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <a href="index.html"><img src="assets/logo vq.svg" alt="" id="logo-menu"></a>
-                    <a href="user.html">
-                      <p class="m-0">Luis Muñoz</p>
-                      <span><b>Admin</b></span>
+              <div class="d-flex flex-column align-items-center text-center">
+                <a href="index.html"><img src="assets/logo vq.svg" alt="" id="logo-menu"></a>
+                <a href="user.html">
+                  <p class="m-0">Luis Muñoz</p>
+                  <span><b>Admin</b></span>
+                </a>
+              </div>
+
+              <hr>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">
+                    <span data-feather="home"></span>
+                    Dashboard
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aportaciones.html">
+                    <span data-feather="dollar-sign"></span>
+                    Aportaciones
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="viviendas.html">
+                    <span data-feather="users"></span>
+                    Viviendas
+                  </a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link" href="ingresos.html">
+                    <span data-feather="arrow-right"></span>
+                    Ingresos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="egresos.html">
+                    <span data-feather="arrow-left"></span>
+                    Egresos
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="balance.html">
+                        <span data-feather="bar-chart-2"></span>
+                        Balance
                     </a>
-                  </div>
-
-                  <hr>
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">
-                        <span data-feather="home"></span>
-                        Dashboard
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="aportaciones.html">
-                        <span data-feather="dollar-sign"></span>
-                        Aportaciones
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="viviendas.html">
-                        <span data-feather="users"></span>
-                        Viviendas
-                      </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                      <a class="nav-link" href="ingresos.html">
-                        <span data-feather="arrow-right"></span>
-                        Ingresos
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="egresos.html">
-                        <span data-feather="arrow-left"></span>
-                        Egresos
-                      </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                      <a class="nav-link" href="alta-usuarios.html">
-                        <span data-feather="user-check"></span>
-                        Alta Usuarios
-                      </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                      <a class="nav-link" href="login.html">
-                        <span data-feather="log-out"></span>
-                        Salir
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link" href="alta-usuarios.html">
+                    <span data-feather="user-check"></span>
+                    Alta Usuarios
+                  </a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">
+                    <span data-feather="log-out"></span>
+                    Salir
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </nav>
 
             <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
               
-              <!-- Buscador General -->
-              <div class="container-fluid">
-                <div class="input-group my-3">
-                  <input type="text" name="" id="" class="form-control" placeholder="Buscar">
-                  <span class="input-group-text">
-                    <i data-feather="search"></i>
-                  </span>
-                </div>
+             <!-- Buscador General -->
+             <div class="container-fluid">
+              <div class="input-group my-3">
+                <input type="text" name="" id="" class="form-control" placeholder="Buscar">
+                <a href="vivienda-encontrada.html" class="input-group-text" style="cursor: pointer;">
+                  <i data-feather="search"></i>
+                </a>
               </div>
+            </div>
               
               <div class="row">
                 <div class="col-12">

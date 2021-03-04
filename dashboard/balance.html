@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <!--Feather Icons-->
     <script src="https://unpkg.com/feather-icons"></script>
+    <!--Charts JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
     <title>Sistema de Administración Villa Quietud</title>
 </head>
@@ -100,73 +102,87 @@
                 </div>
               </div>
               
-              <div class="row mb-3">
-                <div class="col-12">
-                  <h1>Alta de Usuarios</h1>
-                  <p>Tienes el rol de <b>Administrador</b> por lo que podras dar de alta a otros Administradores o Gestores de Cobranza.</p>
-                </div>
-              </div>
+             
 
-              <div class="row mb-3 d-flex justify-content-center">
-                <div class="col-6">
-                  <div class="card">
+              <div class="row">
+                <div class="col-12">
+                  <h1>Balance General</h1>
+                  <p>Los datos mostrados son el mes en curso (Seleccione otro rango para mostrar mas información)</p>
+                </div>              
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex mb-3">
+                    <h3>Seleccione</h3>
+                    <select class="form-select mx-3" aria-label="Default select example">
+                        <option selected>Seleccione Año</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                      </select>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione un Mes</option>
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                      </select>
+
+                </div>
+
+                <div class="col-4 text-center">
+                  <div class="card bordes-verdes">
                     <div class="card-body">
-                       <h4>Registro de nuevo usuario</h4>
-                       <form action="">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Nombre y Apellido</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Juan Perez">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Numero Celular</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="10 digitos">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nombre@correo.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Selecciona un Rol</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Selecciona una opción</option>
-                                    <option value="Admin">Administrador</option>
-                                    <option value="Cash">Cobranza</option>
-                                  </select>
-                                  <div class="form-text">Un Administrador tendra los mismo privilegios que su cuenta, un Gestor de cobranza solo podra acceder a los cobros y edición de viviendas.</div>
-                            </div>
-                            <div class="d-grid">
-                                <a type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#myModalData">Guardar</a>
-                                <a href="user.html" class="btn btn-danger">Cancelar</a>
-                            </div>
-                       </form>
+                      <p>Ingresos</p>
+                      <span class="fs-3"><b class="moneda">125,000.00</b></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 text-center">
+                  <div class="card bordes-rojos">
+                    <div class="card-body">
+                      <p>Egresos</p>
+                      <span class="fs-3"><b class="moneda">115,000.00</b></span>
+                    </div>
+                  </div>
+                </div><div class="col-4 text-center">
+                  <div class="card bordes-azules">
+                    <div class="card-body">
+                      <p>Balance</p>
+                      <span class="fs-3"><b class="moneda">10,000</b></span>
                     </div>
                   </div>
                 </div>
               </div>
 
-             </div>
+              <!--Canvas Charts JS (Estadisticas)-->
+              <div class="row my-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="chLine"></canvas>
+                        </div>
+                    </div>
+                </div>
+             </div>     
 
+            </div>
         </div>
     </main>
    
-    <!-- Modal Usuarios-->
-    <div class="modal fade" id="myModalData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nuevo Registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-            Registro creado correctamente, enviaremos un correo electronico con una contraseña autogenerada para acceder al sistema
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
-            </div>
-        </div>
-        </div>
-    </div>
 
+    <!--Charts Ingresos-->
+    <script src="charts-balance.js"></script>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
